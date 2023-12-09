@@ -1,8 +1,94 @@
+/* import poppin font from google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
 /* reset css */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 
+:root{
+--clr : #222327;
+
+}
+
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--clr);
+}
+
+
+.navihation{
+  width: 400px;
+  height: 70px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.navihation ul { 
+  display: flex;
+  width: 350px;
+}
+
+.navihation ul li{
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.navihation ul li a{
+  position: relative;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navihation ul li a .icon{
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  transition: 0.5s;
+  text-align: center;
+  color: var(--clr);
+}
+
+
+.navihation ul li:hover a .icon{
+  transform: translateY(-35px);
+}
+
+.navihation ul li a .title{
+  position: absolute;
+  font-weight: 400;
+  font-size: .75em;
+  letter-spacing:0.05em;
+  transition: .5s;
+  color: var(--clr);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.navihation ul li:hover a .title{
+  opacity: 1;
+  transform: translateY(10px);
+}
