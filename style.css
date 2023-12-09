@@ -73,7 +73,7 @@ body{
 }
 
 
-.navihation ul li:hover a .icon{
+.navihation ul li.active a .icon{
   transform: translateY(-35px);
 }
 
@@ -88,7 +88,71 @@ body{
   transform: translateY(20px);
 }
 
-.navihation ul li:hover a .title{
+.navihation ul li.active a .title{
   opacity: 1;
   transform: translateY(10px);
 }
+
+
+.indicator{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  /* background: #29fd53; add a gradiend bg */
+  background: linear-gradient(45deg, #29fd53, #00ffde);
+  top: -50%;
+  border-radius: 50%;
+  border: 6px solid var(--clr);
+  transition: 0.5s;
+}
+
+.indicator::before{
+  content: '';
+  position: absolute;
+  top:50%;
+  left:-22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow:0px -10px 0px 0px var(--clr);
+}
+
+.indicator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -10px 0px 0px var(--clr);
+}
+
+
+/* connect active and indicator */
+/* .navihation ul li:nth-child(1).active ~ .indicator{
+  transform: translateX(calc(70px * 0));
+}
+
+.navihation ul li:nth-child(2).active ~ .indicator{
+  transform: translateX(calc(70px * 1));
+}
+
+.navihation ul li:nth-child(3).active ~ .indicator{
+  transform: translateX(calc(70px * 2));
+}
+
+.navihation ul li:nth-child(4).active ~ .indicator{
+  transform: translateX(calc(70px * 3));
+}
+
+.navihation ul li:nth-child(5).active ~ .indicator{
+  transform: translateX(calc(70px * 4));
+}
+
+.navihation ul li:nth-child(6).active ~ .indicator{
+  transform: translateX(calc(70px * 5));
+} */
+
