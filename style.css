@@ -20,7 +20,7 @@
 body{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:center;
   min-height: 100vh;
   background: var(--clr);
 }
@@ -99,7 +99,7 @@ body{
   width: 70px;
   height: 70px;
   /* background: #29fd53; add a gradiend bg */
-  background: linear-gradient(45deg, #29fd53, #00ffde);
+  background: linear-gradient(45deg, #e28144, #FF914E);
   top: -50%;
   border-radius: 50%;
   border: 6px solid var(--clr);
@@ -155,4 +155,9 @@ body{
 .navihation ul li:nth-child(6).active ~ .indicator{
   transform: translateX(calc(70px * 5));
 } */
+
+li.list.active .icon.material-symbols-outlined {
+  color: #fff;
+}
+
 
